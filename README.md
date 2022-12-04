@@ -1,9 +1,3 @@
-# Blueprint - Frigate Telegram Notification
-An Home Assistant Blueprint to receive Snapshots and Clips from Frigate
-
-Add this url to your Blueprints projects:
-https://gist.github.com/NdR91/5486a1e55101e062c48545395b7dd9a3
-
 ```yaml
 blueprint:
   name: Frigate - Telegram Notification
@@ -95,8 +89,7 @@ action:
   data:
     target: '{{ target_chat }}'
     disable_notification: '{{ notification }}'
-    caption: |
-      Movimento rilevato. Telecamera: {{ camera_name }} (ID: {{ id }})
+    caption: 'Motion Detected on {{ camera_name }} camera'
     url: >-
       {{base_url}}/api/frigate/notifications/{{id}}/snapshot.jpg
 - repeat:
