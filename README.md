@@ -1,4 +1,3 @@
-```yaml
 blueprint:
   name: Frigate - Telegram Notification
   description: Create automations to receive Snapshots and Clips from Frigate
@@ -112,4 +111,3 @@ action:
         url: >-
           {{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4
     until: '{{ wait.trigger.payload_json[''type''] == ''end'' }}'
-```
