@@ -88,7 +88,7 @@ action:
   data:
     target: '{{ target_chat }}'
     disable_notification: '{{ notification }}'
-    caption: 'Motion Detected on {{ camera_name }} camera'
+    caption: 'Motion Detected on the {{ camera_name }} camera'
     url: >-
       {{base_url}}/api/frigate/notifications/{{id}}/snapshot.jpg
 - repeat:
@@ -107,7 +107,7 @@ action:
       data:
         target: '{{ target_chat }}'
         disable_notification: '{{ notification }}'
-        caption: 'Movimento rilevato. Telecamera: {{ camera_name }}'
+        caption: 'Motion Detected on the {{ camera_name }} camera'
         url: >-
           {{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4
     until: '{{ wait.trigger.payload_json[''type''] == ''end'' }}'
